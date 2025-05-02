@@ -15,6 +15,10 @@ on:
         description: 'TimescaleDB version'
         required: true
         default: '2.11.0'
+      PGVECTORS_VERSION:
+        description: 'pgvecto.rs version'
+        required: true
+        default: '0.4.0'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -51,3 +55,4 @@ jobs:
           POSTGRESQL_VERSION=${{ github.event.inputs.PG_VERSION }}
           EXTENSIONS=${{ github.event.inputs.EXTENSIONS }}
           TIMESCALEDB_VERSION=${{ github.event.inputs.TIMESCALEDB_VERSION }}
+          PGVECTORS_VERSION=${{ github.event.inputs.PGVECTORS_VERSION }}
