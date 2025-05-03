@@ -43,7 +43,7 @@ for EXTENSION in ${EXTENSIONS}; do
         wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64_public.deb
         wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64_vectors.deb
 
-        apt-get install --yes vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64*.deb
+        apt-get install --yes ./vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64*.deb
 
         apg-get remove wget --auto-remove -y
 
