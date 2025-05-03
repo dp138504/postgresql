@@ -45,7 +45,7 @@ for EXTENSION in ${EXTENSIONS}; do
 
         apt-get install --yes ./vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64*.deb
 
-        apg-get remove wget --auto-remove -y
+        apt-get remove wget --auto-remove -y
 
         continue
     fi
