@@ -35,6 +35,8 @@ for EXTENSION in ${EXTENSIONS}; do
     fi
 
     if [ "$EXTENSION" == "pgvecto.rs" ]; then
+        apt-get install wget -y
+    
         # Grab release assets
         wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64.deb
         wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64_extensions.deb
@@ -42,6 +44,8 @@ for EXTENSION in ${EXTENSIONS}; do
         wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64_vectors.deb
 
         apt-get install --yes vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64*.deb
+
+        apg-get remove wget --auto-remove -y
 
         continue
     fi
