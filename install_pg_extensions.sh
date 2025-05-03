@@ -36,10 +36,10 @@ for EXTENSION in ${EXTENSIONS}; do
 
     if [ "$EXTENSION" == "pgvecto.rs" ]; then
         # Grab release assets
-        wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTRS_VERSION}_amd64.deb
-        wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTRS_VERSION}_amd64_extensions.deb
-        wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTRS_VERSION}_amd64_public.deb
-        wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTRS_VERSION}_amd64_vectors.deb
+        wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64.deb
+        wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64_extensions.deb
+        wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64_public.deb
+        wget --quiet https://github.com/tensorchord/pgvecto.rs/releases/download/v${PGVECTORS_VERSION}/vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64_vectors.deb
 
         apt-get install --yes vectors-pg${PG_MAJOR}_${PGVECTORS_VERSION}_amd64*.deb
 
